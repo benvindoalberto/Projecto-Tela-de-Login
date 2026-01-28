@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+:root {
+	--color1: #F22E3E;
+	--color2: #A61F2B;
+	--color3: #59111E;
+	--color4: #260101;
+	--color5: #F21313;
+}
+
+* {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	background-color: var(--color1);
+	height: 100vh;
+	width: 100vw;
+}
+
+main {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+}
+
+section#login {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background-color: white;
+	width: 250px;
+	height: 515px;
+	border-radius: 20px;
+	overflow: hidden;
+	box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.541);
+	transition: width .3s, heith .3s;
+	transition-timing-function: ease;
+	transform: translate(-50%, -50%);
+}
+
+section#login > div#image {
+	background-color: var(--color2);
+	background-image: url(../images/miles_morales_6.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 200px;
+	display: block;
+}
+
+section#login > div#formulario {
+	display: block;
+	padding: 10px;
+}
+
+div#formulario > h1 {
+	font-size: 1.2em;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+div#formulario > p {
+	text-indent: 13px;
+	font-size: 0.8em;
+	margin-bottom: 10px;
+}
+
+form > div.campo {
+	display: block;
+	background-color: var(--color1);
+	margin: 5px 0;
+	border-radius: 8px;
+	width: 100%;
+	height: 40px;
+}
+
+div.campo > label {
+	display: none;
+}
+
+div.campo > span {
+	color: white;
+	font-size: 2em;
+	width: 40px;
+	padding: 5px;
+}
+
+div.campo > input {
+	background-color: white;
+	font-size: 1em;
+	border: 1px solid var(--color1);
+	border-radius: 0 8px 8px 0;
+	height: 100%;
+	width: calc(100% - 44px);
+	padding: 4px;
+	transform: translateY(-11px);
+}
+
+/*
+Mudar de cor ao clicar nele 
+div.campo > input:focus-within {
+	background-color: white;
+}
+*/
+
+form > input[type=submit] {
+	display: block;
+	font-size: 1em;
+	width: 100%;
+	height: 40px;
+	background-color: rgb(39, 38, 38);
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+form > input[type=submit]:hover {
+	background-color: black;
+}
+
+form > a.botao {
+	display: block;
+	text-align: center;
+	width: 100%;
+	height: 40px;
+	background-color: white;
+	border: 1px solid var(--color1);
+	border-radius: 5px;
+	margin-top: 5px;
+	text-decoration: none;
+	color: black;
+	cursor: pointer;
+}
+
+form > a.botao:hover {
+	background-color: var(--color1);
+	color: white;
+}
+
+form > a.botao > span {
+	font-size: 0.9em;
+	padding-top: 10px;
+}
+
